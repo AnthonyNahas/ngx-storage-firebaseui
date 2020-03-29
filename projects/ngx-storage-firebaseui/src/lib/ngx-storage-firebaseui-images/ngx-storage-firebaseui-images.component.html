@@ -12,19 +12,20 @@
   </button>
 
   <div *ngFor="let file of files">
-    <!--    <upload-task [file]="file" [path]="'properties/' + property.id"></upload-task>-->
+    <ngx-storage-firebaseui-images-uploader [file]="file" [path]="path">
+    </ngx-storage-firebaseui-images-uploader>
   </div>
 
-  <!--  <div *ngFor="let item of imgsItems ; let i = index">-->
-  <!--    <button [lightbox]="i" class="grid-item" gallery="lightbox"-->
-  <!--            mat-raised-button mat-ripple>-->
+  <div *ngFor="let item of images ; let i = index">
+    <button class="grid-item" gallery="lightbox"
+            mat-raised-button mat-ripple>
 
-  <!--      <span [style.backgroundImage]="'url(' + item.data.thumb + ')'" class="grid-image"></span>-->
-  <!--    </button>-->
-  <!--    <div *ngIf="editMode" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="5px">-->
-  <!--      <button (click)="deleteImage(i)" color="warn" mat-mini-fab matTooltip="Löschen">-->
-  <!--        <mat-icon>delete</mat-icon>-->
-  <!--      </button>-->
-  <!--    </div>-->
-  <!--  </div>-->
+      <span [style.backgroundImage]="'url(' + item.downloadURL + ')'" class="grid-image"></span>
+    </button>
+    <div *ngIf="editMode" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="5px">
+      <button (click)="deleteImage(i)" color="warn" mat-mini-fab matTooltip="Löschen">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
 </div>

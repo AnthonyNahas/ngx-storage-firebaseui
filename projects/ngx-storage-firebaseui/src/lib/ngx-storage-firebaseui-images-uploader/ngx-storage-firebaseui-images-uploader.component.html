@@ -1,0 +1,38 @@
+<div *ngIf="(snapshot | async) as snap">
+  <button [disabled]="true"
+          class="grid-item" mat-raised-button mat-ripple>
+    <span *ngIf="downloadURL"
+          [style.backgroundImage]="'url(' + downloadURL+ ')'"
+          class="grid-image">
+    </span>
+    <span *ngIf="!downloadURL && percentage | async as pct" fxFlexAlign="center center">
+      <span class="percentage" fxFlexAlign="center center">{{ pct | number }}%</span>
+      <mat-progress-spinner
+        [value]="pct"
+        color="accent"
+        mode="determinate"
+        style="margin:0 auto;">
+    </mat-progress-spinner>
+    </span>
+  </button>
+  <div *ngIf="!downloadURL"
+       fxLayout="row"
+       fxLayoutAlign="space-between center"
+       fxLayoutGap="5px"
+       style="margin-left: 1rem; margin-right: 1rem">
+    <div fxLayout="row" fxLayoutGap="5px">
+      <button (click)="task.cancel()" [disabled]="!isActive(snap)" color="warn"
+              mat-mini-fab
+              matTooltip="abbrechen">
+        <mat-icon>close</mat-icon>
+      </button>
+      <button (click)="task.pause()" *ngIf="isActive(snap)" color="primary" mat-mini-fab>
+        <mat-icon>pause</mat-icon>
+      </button>
+      <button (click)="task.resume()" *ngIf="snap?.state === 'paused'" color="accent" mat-mini-fab>
+        <mat-icon>play_arrow</mat-icon>
+      </button>
+    </div>
+    <span class="text-truncate" mat-card-subtitle>1mb</span>
+  </div>
+</div>
