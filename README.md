@@ -63,28 +63,20 @@ by starring :star: and sharing it :loudspeaker:
 - :lipstick: pick up your own theme! change the primary, accent and warn colors whenever you need (e.g to support light and dark themes)
 - :ship: super easy to use with an angular based project (project that is created with the [angular-cli](https://cli.angular.io/))
 - :soon: optional configuration
-- :recycle: configure your authentication providers in runtime
-- :recycle: reusable components for every project that needs an authentication with a firebase project/app.
+- :recycle: configure your components in runtime
+- :recycle: reusable components for every project that needs some uploads workflows with a firebase project/app.
 - :customs: built in feedback mechanism in form of a [snackbar](https://material.angular.io/components/snack-bar/overview) when an error or `any` important event occurred.
-- :sos: ability to sign out or even to delete totally the account
-- :ghost: your client does not want to create an account in your project? Let him to sign in anonymously!
-- :busts_in_silhouette: user profile component to display user's data using <ngx-storage-firebaseui-user></ngx-storage-firebaseui-user> via `ngx-storage-firebaseui-user`
-- :zap: update user profile as feature
-- :fire: [Sync user's authentication with FIRESTORE](FIRESTORE_SYNC.md) **AUTOMATICALLY**
-- :muscle: Forgot Password feature! Go and let your users to recover their passwords easily
+- :sos: ability to delete files
+- :ghost: compatible with `ngx-auth-firebaseui` [learn more](https://github.com/AnthonyNahas/ngx-auth-firebaseui)
+- :fire: [Sync user's uploads with FIRESTORE](FIRESTORE_SYNC.md) **AUTOMATICALLY**
 - :tada: Supports SSR - Server Side Rendering
-- [support of i18n](https://ngx-storage-firebaseui.firebaseapp.com/i18n)
+- :soon: [support of i18n](https://ngx-storage-firebaseui.firebaseapp.com/i18n)
 
 
 <a name="components"/>
 
 ## Library's components
 - `<ngx-storage-firebaseui>` used for the authentication process [see more](docs/ngx-storage-firebaseui.md)
-- `<ngx-storage-firebaseui-register>` standalone registration component to create new accounts [see more]()
-- `<ngx-storage-firebaseui-login>` standalone login component to use already created accounts [see more]()
-- `<ngx-storage-firebaseui-providers>` used to display only buttons for providers like google, facebook, twitter, github, microsoft and yahoo [see more]()
-- `<ngx-storage-firebaseui-user>` used to display/edit the data of the current authenticated user in form of a material card [see more]()
-- `<ngx-storage-firebaseui-avatar>` used to display/edit the data of the current authenticated user in the toolbar [see more]()
 
 
 ## Supported Processes/Workflows and Actions:
@@ -93,9 +85,6 @@ by starring :star: and sharing it :loudspeaker:
 - delete image
 - pre-built firebase functions to auto-rotate images 
 
-
-## AUTHENTICATION - if your firebase storage is secure, please consider to use `ngx-auth-firebaseui` to handle user's authentication with your firebase projects 
-- `LoggedInGuard` used to protect angular routes from unauthenticated users (with fallback routes via `NgxAuthFirebaseUIConfig`)
 
 <a name="requirements"/>
 
@@ -123,7 +112,6 @@ take a look at live example with firestore's synchronization [here](FIRESTORE_SY
 
 
 <a name="sreenshots"/>
-
 
 
 
@@ -256,8 +244,8 @@ export class OtherModule {
 >**Note**:If you are using `SystemJS`, you should adjust your configuration to point to the UMD bundle.
 In your systemjs config file, `map` needs to tell the System loader where to look for `ngx-storage-firebaseui`:
 ```js
-map: {
-  'ngx-storage-firebaseui': 'node_modules/ngx-storage-firebaseui/bundles/ngx-storage-firebaseui.umd.js',
+{
+  'ngx-storage-firebaseui';: 'node_modules/ngx-storage-firebaseui/bundles/ngx-storage-firebaseui.umd.js',
 }
 ```
 
