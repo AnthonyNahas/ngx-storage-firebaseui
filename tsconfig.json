@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-storage-firebaseui": [
+        "dist/ngx-storage-firebaseui/ngx-storage-firebaseui",
+        "dist/ngx-storage-firebaseui"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
