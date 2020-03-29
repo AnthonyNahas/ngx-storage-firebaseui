@@ -1,0 +1,30 @@
+<div class="grid">
+  <input #fileInput
+         (change)="onDrop($event.target.files)"
+         [hidden]="true"
+         accept="image/*"
+         id="fileInput"
+         multiple
+         name="file"
+         type="file">
+  <button (click)="link()" class="grid-item" mat-raised-button matTooltip="Bilder hinzufügen">
+    <mat-icon color="accent" style="transform: scale(3)">add</mat-icon>
+  </button>
+
+  <div *ngFor="let file of files">
+    <!--    <upload-task [file]="file" [path]="'properties/' + property.id"></upload-task>-->
+  </div>
+
+  <!--  <div *ngFor="let item of imgsItems ; let i = index">-->
+  <!--    <button [lightbox]="i" class="grid-item" gallery="lightbox"-->
+  <!--            mat-raised-button mat-ripple>-->
+
+  <!--      <span [style.backgroundImage]="'url(' + item.data.thumb + ')'" class="grid-image"></span>-->
+  <!--    </button>-->
+  <!--    <div *ngIf="editMode" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="5px">-->
+  <!--      <button (click)="deleteImage(i)" color="warn" mat-mini-fab matTooltip="Löschen">-->
+  <!--        <mat-icon>delete</mat-icon>-->
+  <!--      </button>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</div>

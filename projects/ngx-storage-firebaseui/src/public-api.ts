@@ -5,3 +5,4 @@
 export * from './lib/ngx-storage-firebaseui.service';
 export * from './lib/ngx-storage-firebaseui.component';
 export * from './lib/ngx-storage-firebaseui.module';
+export * from './lib/ngx-storage-firebaseui-images/ngx-storage-firebaseui-images.component';
