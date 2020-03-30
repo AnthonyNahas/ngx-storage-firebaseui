@@ -57,6 +57,7 @@ by starring :star: and sharing it :loudspeaker:
 - [Support](#support)
 - [License](#license)
 
+<a name="components"/>
 
 ## Why to use ngx-storage-firebaseui ?
 - :gift_heart: it uses a responsive and accessible web design UX/UI from google material concepts and components (supporting desktop, tablet and mobile view) incl. smooth animations for a better UX.
@@ -73,17 +74,17 @@ by starring :star: and sharing it :loudspeaker:
 - :soon: [support of i18n](https://ngx-storage-firebaseui.firebaseapp.com/i18n)
 
 
-<a name="components"/>
+<a name="why-to-use-ngx-storage-firebaseui"/>
 
 ## Library's components
-- `<ngx-storage-firebaseui>` used for the authentication process [see more](docs/ngx-storage-firebaseui.md)
+- `<ngx-storage-firebaseui-images>` used to upload imaged to firebase storage and sync them with firestore 
 
 
 ## Supported Processes/Workflows and Actions:
 - upload images
 - image grid
-- delete image
-- pre-built firebase functions to auto-rotate images 
+- delete image (soon)
+- pre-built firebase functions to auto-rotate images (soon)          
 
 
 <a name="requirements"/>
@@ -92,12 +93,11 @@ by starring :star: and sharing it :loudspeaker:
 - [angular material icons](https://material.angular.io/guide/getting-started#step-6-optional-add-material-icons)
 - [angular cdk - v9.x](https://www.npmjs.com/package/@angular/cdk)
 - [angular material - v9.x](https://www.npmjs.com/package/@angular/material)
-- [angular forms - v9.x](https://www.npmjs.com/package/@angular/forms)
 - [angular animations - v9.x](https://www.npmjs.com/package/@angular/animations)
 - [angular router - v9.x](https://www.npmjs.com/package/@angular/router)
 - [angular flex-layout v9.0.0-beta.29](https://www.npmjs.com/package/@angular/flex-layout)
 - [@angular/fire - v5.4.x](https://www.npmjs.com/package/@angular/fire)
-- [firebase - v7.x](https://www.npmjs.com/package/firebase)
+- [firebase - v7.13.x](https://www.npmjs.com/package/firebase)
 
 the full tutorial guide can be found [here](https://ngx-storage-firebaseui.firebaseapp.com/getting-started)
 
@@ -106,7 +106,6 @@ the full tutorial guide can be found [here](https://ngx-storage-firebaseui.fireb
 
 ##  [Demo](https://ngx-storage-firebaseui.firebaseapp.com/) |  [Features](https://ngx-storage-firebaseui.firebaseapp.com/features) | [Examples](https://ngx-storage-firebaseui.firebaseapp.com/examples)
 
-take a look at live example with firestore's synchronization [here](FIRESTORE_SYNC.md)
 
 ---
 
@@ -127,10 +126,9 @@ take a look at live example with firestore's synchronization [here](FIRESTORE_SY
     "@angular/animations": "^9.x",
     "@angular/cdk": "^9.x",
     "@angular/flex-layout": "^9.0.0-beta.29",
-    "@angular/forms": "^9.x",
     "@angular/material": "^9.x",
     "@angular/fire": "5.4.x",
-    "firebase": "7.x",
+    "firebase": "7.13.x",
   }
 ```
 
@@ -304,14 +302,25 @@ export class AppModule { }
 
 Once the library is imported, you can use its components, directives and pipes in your Angular application:
 
-### `<ngx-storage-firebaseui></ngx-storage-firebaseui>` [see the usage](https://github.com/AnthonyNahas/ngx-storage-firebaseui/blob/master/docs/ngx-storage-firebaseui.md#usage)
+### `<ngx-storage-firebaseui-images></ngx-storage-firebaseui-images>` [see the usage](https://github.com/AnthonyNahas/ngx-storage-firebaseui/blob/master/docs/ngx-storage-firebaseui.md#usage)
 
 
 <a name="api"/>
 
 ## API
 
-### `<ngx-storage-firebaseui></ngx-storage-firebaseui>` [see the api](https://github.com/AnthonyNahas/ngx-storage-firebaseui/blob/master/docs/ngx-storage-firebaseui.md#api)
+### `<ngx-storage-firebaseui-images></ngx-storage-firebaseui-images>` [see the api](https://github.com/AnthonyNahas/ngx-storage-firebaseui/blob/master/docs/ngx-storage-firebaseui.md#api)
+
+
+| option | bind  |  type  |   default    | description  |
+|:---------------------|:------:|:------:|:------------:|:-------------------------------------------------------------------------------------------------|
+| path                        | `Input()`  | `string` | - | path to store the image into firebase storage as well as in the firestore
+| load                        | `Input()`  | `boolean` | `true` | whether to load the uploaded images from firebase  
+| addButtonTooltipText        | `Input()`  | `string` | `add picture` | text of the add button tooltip 
+| onLoad                      | `Output()`  | `number`  | - | called when the images are loaded from firestore
+| onImageUploaded             | `Output()`  | `number`  | - | called when an image is uploaded to firebase storage
+| onImageSelectedAtIndex      | `Output()`  | `number`  | - | called when an image is selected / clicked
+
 
 
 ## Other Angular Libraries
