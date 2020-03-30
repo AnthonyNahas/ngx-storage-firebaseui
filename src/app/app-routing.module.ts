@@ -1,8 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {GettingStartedComponent} from './getting-started/getting-started.component';
+import {UsageComponent} from './usage/usage.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  // {path: '', redirectTo: 'getting-started', pathMatch: 'full'},
+  {path: '', component: UsageComponent},
+  {path: 'getting-started', component: GettingStartedComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
@@ -10,4 +16,5 @@ const routes: Routes = [];
   })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

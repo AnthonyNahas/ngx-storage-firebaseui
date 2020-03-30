@@ -1,0 +1,23 @@
+<!-- Usage -->
+<h2>Usage</h2>
+
+<mat-tab-group>
+  <mat-tab label="Usage">
+    <ngx-storage-firebaseui-images (onImageSelectedAtIndex)="onImageSelectedAtIndex($event)"
+                                   (onImageUploaded)="onImageUploaded($event)"
+                                   (onLoad)="onLoad($event)"
+                                   path="cars">
+    </ngx-storage-firebaseui-images>
+  </mat-tab>
+  <mat-tab label="HTML">
+    <markdown src="assets/md/usage/e1.md"></markdown>
+  </mat-tab>
+  <mat-tab label="Full Example">
+    <markdown src="assets/md/usage/full_example.md"></markdown>
+  </mat-tab>
+</mat-tab-group>
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h2 style="margin-top: 4rem">Next Steps</h2>
+  <a color="primary" mat-raised-button routerLink="getting-started" style="color:white;;">Getting Started</a>
+</div>
