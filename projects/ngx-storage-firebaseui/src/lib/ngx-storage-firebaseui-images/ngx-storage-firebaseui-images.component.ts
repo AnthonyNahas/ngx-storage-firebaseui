@@ -17,8 +17,17 @@ export class NgxStorageFirebaseuiImagesComponent implements OnInit {
 
   @Input() load = true;
 
+  @Input() addButtonTooltipText = 'add picture';
+
   // tslint:disable-next-line:no-output-on-prefix
-  @Output() onLoad: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onLoad: EventEmitter<NgxStorageImage[]> = new EventEmitter<NgxStorageImage[]>();
+
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onImageUploaded: EventEmitter<NgxStorageImage> = new EventEmitter<NgxStorageImage>();
+
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onImageSelectedAtIndex: EventEmitter<number> = new EventEmitter<number>();
+
 
   files: File[] = [];
   images: NgxStorageImage[] = [];

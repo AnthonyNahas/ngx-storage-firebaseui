@@ -183,10 +183,10 @@ npm i -s firebase @angular/fire
 
 Once installed you need to import the main module:
 ```js
-import { NgxAuthFirebaseUIModule } from 'ngx-storage-firebaseui';
+import { NgxStorageFirebaseuiModule } from 'ngx-storage-firebaseui';
 ```
 The only remaining part is to list the imported module in your application module. The exact method will be slightly
-different for the root (top-level) module for which you should end up with the code similar to (notice ` NgxAuthFirebaseUIModule .forRoot()`):
+different for the root (top-level) module for which you should end up with the code similar to (notice ` NgxStorageFirebaseuiModule .forRoot()`):
 
 
 and then from your Angular `AppModule`:
@@ -198,7 +198,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { NgxAuthFirebaseUIModule } from 'ngx-storage-firebaseui';
+import { NgxStorageFirebaseuiModule } from 'ngx-storage-firebaseui';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -210,7 +210,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
 
     // Specify the ngx-storage-firebaseui library as an import
-    NgxAuthFirebaseUIModule.forRoot({
+    NgxStorageFirebaseuiModule.forRoot({
                     apiKey: 'your-firebase-apiKey',
                     authDomain: 'your-firebase-authDomain',
                     databaseURL: 'your-firebase-databaseURL',
@@ -226,14 +226,14 @@ export class AppModule { }
 
 ```
 
-Other modules in your application can simply import ` NgxAuthFirebaseUIModule `:
+Other modules in your application can simply import ` NgxStorageFirebaseuiModule `:
 
 ```js
-import { NgxAuthFirebaseUIModule } from 'ngx-storage-firebaseui';
+import { NgxStorageFirebaseuiModule } from 'ngx-storage-firebaseui';
 
 @NgModule({
   declarations: [OtherComponent, ...],
-  imports: [NgxAuthFirebaseUIModule, ...],
+  imports: [NgxStorageFirebaseuiModule, ...],
 })
 export class OtherModule {
 }
@@ -260,7 +260,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { NgxAuthFirebaseUIModule } from 'ngx-storage-firebaseui';
+import { NgxStorageFirebaseuiModule } from 'ngx-storage-firebaseui';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -272,7 +272,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
 
     // Specify the ngx-storage-firebaseui library as an import
-    NgxAuthFirebaseUIModule.forRoot(
+    NgxStorageFirebaseuiModule.forRoot(
                 {
                   apiKey: 'your-firebase-apiKey',
                   authDomain: 'your-firebase-authDomain',

@@ -7,18 +7,21 @@
          multiple
          name="file"
          type="file">
-  <button (click)="link()" class="grid-item" mat-raised-button matTooltip="Bilder hinzufügen">
+  <button (click)="link()" [matTooltip]="addButtonTooltipText" class="grid-item" mat-raised-button>
     <mat-icon color="accent" style="transform: scale(3)">add</mat-icon>
   </button>
 
   <div *ngFor="let file of files">
-    <ngx-storage-firebaseui-images-uploader [file]="file" [path]="path">
+    <ngx-storage-firebaseui-images-uploader (onImageUploaded)="onImageUploaded.emit($event)"
+                                            [file]="file"
+                                            [path]="path">
     </ngx-storage-firebaseui-images-uploader>
   </div>
 
   <div *ngFor="let item of images ; let i = index">
     <button class="grid-item" gallery="lightbox"
-            mat-raised-button mat-ripple>
+            (click)="onImageSelectedAtIndex.emit(i)" mat-raised-button
+            mat-ripple>
 
       <span [style.backgroundImage]="'url(' + item.downloadURL + ')'" class="grid-image"></span>
     </button>
