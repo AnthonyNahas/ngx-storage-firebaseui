@@ -1,5 +1,4 @@
-export * from './config.interface';
-
+````typescript
 /**
  * @author Anthony Nahas
  * @version 1.0
@@ -11,3 +10,5 @@ export interface NgxStorageImage {
   path: string;
   thumbs?: Map<string, NgxStorageImage>;
 }
+
+````
