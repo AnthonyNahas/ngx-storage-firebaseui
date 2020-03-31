@@ -48,7 +48,6 @@ by starring :star: and sharing it :loudspeaker:
 - [Dependencies](#dependencies)
 - [Firebase Cloud Functions and Firebase extensions](#firebase_requirements)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
 - [API](#api)
 - [Run Demo App Locally](docs/INSTRUCTIONS_DEMO.md)
@@ -468,57 +467,7 @@ In your systemjs config file, `map` needs to tell the System loader where to loo
 }
 ```
 
-<a name="configuration"/>
 
-## (2) [Configuration](https://ngx-storage-firebaseui.firebaseapp.com/examples)
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-
-// Import your library
-import { NgxStorageFirebaseuiModule } from 'ngx-storage-firebaseui';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-
-    // Specify the ngx-storage-firebaseui library as an import
-    NgxStorageFirebaseuiModule.forRoot(
-                {
-                  apiKey: 'your-firebase-apiKey',
-                  authDomain: 'your-firebase-authDomain',
-                  databaseURL: 'your-firebase-databaseURL',
-                  projectId: 'your-firebase-projectId',
-                  storageBucket: 'your-firebase-storageBucket',
-                  messagingSenderId: 'your-firebase-messagingSenderId'
-                },
-                 () => 'your_app_name_factory',
-                {
-                  enableFirestoreSync: true, // enable/disable autosync files with firestore
-                  enableEmailVerification: true, // default: true
-                }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-
-```
-
-----
-
-
-<a name="usage"/>
-
----
 ## (3) [Usage](https://ngx-storage-firebaseui.firebaseapp.com/getting-started)
 
 Once the library is imported, you can use its components, directives and pipes in your Angular application:
