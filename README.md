@@ -116,7 +116,7 @@ the full tutorial guide can be found [here](https://ngx-storage-firebaseui.fireb
 </p>
 
 <p align="center">
-  <img width="384px" style="text-align: center;"
+  <img style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/1.png">
 </p>
 
