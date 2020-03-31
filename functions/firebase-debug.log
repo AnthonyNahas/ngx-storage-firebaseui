@@ -1,0 +1,163 @@
+[debug] [2020-03-31T19:40:32.634Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T19:40:32.635Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2020-03-31T19:40:32.635Z] CLI Version:   7.16.2
+[debug] [2020-03-31T19:40:32.635Z] Platform:      darwin
+[debug] [2020-03-31T19:40:32.635Z] Node Version:  v12.15.0
+[debug] [2020-03-31T19:40:32.636Z] Time:          Tue Mar 31 2020 21:40:32 GMT+0200 (Central European Summer Time)
+[debug] [2020-03-31T19:40:32.636Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T19:40:32.636Z] 
+[debug] [2020-03-31T19:40:32.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T19:40:32.641Z] > authorizing via signed-in user
+[debug] [2020-03-31T19:40:32.641Z] [iam] checking project ngx-auth-firebaseui for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-03-31T19:40:32.643Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ngx-auth-firebaseui:testIamPermissions  
+
+[debug] [2020-03-31T19:40:32.859Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'ngx-auth-firebaseui'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script.
+[debug] [2020-03-31T19:40:37.907Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "8.10.0",
+    "firebase-functions": "3.3.0",
+    "child-process-promise": "^2.2.1",
+    "mkdirp-promise": "^5.0.1"
+  },
+  "devDependencies": {
+    "tslint": "^5.20.1",
+    "typescript": "~3.5.3",
+    "@types/jsdom": "^16.2.0",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-03-31T19:40:37.908Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/ngx-auth-firebaseui/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-03-31T19:40:37.909Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/ngx-auth-firebaseui/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-03-31T19:40:38.896Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:38.996Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2020-03-31T19:40:38.997Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ngx-auth-firebaseui/adminSdkConfig  
+ 
+[debug] [2020-03-31T19:40:39.244Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-03-31T19:40:39.247Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/ngx-auth-firebaseui/configs  
+ 
+[debug] [2020-03-31T19:40:39.461Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (40.44 KB) for uploading
+[debug] [2020-03-31T19:40:39.755Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/ngx-auth-firebaseui/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-03-31T19:40:40.507Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:40.508Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-6bc93d8c-1df7-408a-b313-911d75774a43/53b8a346-b022-42b9-babf-f9a84bc05a3f.zip?GoogleAccessId=service-520699629648@gcf-admin-robot.iam.gserviceaccount.com&Expires=1585685440&Signature=lKJJwl%2FjUOdWGmn4q4VO4ERHWRXGFbUiGTg3o9hgHQEdepcvZJr9uEMQ4fl68xWx3mw8inOpCbxWe%2FkXeY4GTQhhTlaeUUheMSH5V6uQRJYZP6mgVHgfgCvwXWuBT%2FWKCxK9kTaoR%2FjVwWqjYzwiAeroLgvPO%2FShGBYIGVxqJN3ybMYOEWb8kuzDiJ2QdAQa4jPnUbqh0EYuIh9hrQA3DJPyvSV8f8V9m%2F7xQV7ykpMS7hFcC9Xadu%2BlMiqgPZtIgUKnHAkjg1FaMlB50m5u%2BXhhmWs5%2FlDUgnq9SqwqOTR32QbZ2C8wtiPPrtJOjQuAu%2Fe1mUVa4wcqF4yFHAw5XA%3D%3D  
+ <request body omitted>
+[debug] [2020-03-31T19:40:41.086Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[debug] [2020-03-31T19:40:41.088Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/ngx-auth-firebaseui/locations/-/functions  
+ 
+[debug] [2020-03-31T19:40:41.526Z] <<< HTTP RESPONSE 200
+[info] i  functions: creating Node.js 8 function syncImgsWithFirestore(us-central1)...
+[debug] [2020-03-31T19:40:41.529Z] Trigger is:  {"eventTrigger":{"resource":"projects/_/buckets/ngx-auth-firebaseui.appspot.com","eventType":"google.storage.object.finalize","service":"storage.googleapis.com"}}
+[info] i  functions: creating Node.js 8 function adjustOrientation(europe-west1)...
+[debug] [2020-03-31T19:40:41.529Z] Trigger is:  {"eventTrigger":{"resource":"projects/_/buckets/ngx-auth-firebaseui.appspot.com","eventType":"google.storage.object.finalize","service":"storage.googleapis.com"}}
+[debug] [2020-03-31T19:40:41.530Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/ngx-auth-firebaseui/services/cloudscheduler.googleapis.com  
+ 
+[debug] [2020-03-31T19:40:42.477Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:42.479Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/ngx-auth-firebaseui/locations/us-central1/functions  
+
+[debug] [2020-03-31T19:40:42.479Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/ngx-auth-firebaseui/locations/europe-west1/functions  
+
+[debug] [2020-03-31T19:40:42.890Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:42.989Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:42.990Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:42.991Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:43.196Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:43.243Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:45.201Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:45.246Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:45.358Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:45.511Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:47.362Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:47.478Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:47.512Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:47.805Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:49.479Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:49.610Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:49.810Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:50.056Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:51.616Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:51.749Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:52.062Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:52.319Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:53.752Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:53.860Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:54.325Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:54.585Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:55.862Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:56.008Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:56.586Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:56.815Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:58.014Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:40:58.127Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:40:58.821Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:40:59.048Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:00.128Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:41:00.270Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:01.054Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:41:01.288Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:02.273Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:41:02.417Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:03.292Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:41:03.540Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:04.419Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:41:04.587Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:05.544Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:41:05.789Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:06.593Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS9ldXJvcGUtd2VzdDEvYWRqdXN0T3JpZW50YXRpb24vUGtBOERFYmlSb2c  
+ 
+[debug] [2020-03-31T19:41:06.787Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T19:41:07.793Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bmd4LWF1dGgtZmlyZWJhc2V1aS91cy1jZW50cmFsMS9zeW5jSW1nc1dpdGhGaXJlc3RvcmUvQUplV3VlcDJpRFE  
+ 
+[debug] [2020-03-31T19:41:08.041Z] <<< HTTP RESPONSE 200

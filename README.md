@@ -41,8 +41,6 @@ by starring :star: and sharing it :loudspeaker:
 ## Table of Contents
 - [Why to use ngx-storage-firebaseui ?](#why-to-use-ngx-storage-firebaseui)
 - [Library's components](#components)
-- [Supported Providers](#supported-procress-and-actions)
-- [Supported Processes and Actions](#supported-procress-and-actions)
 - [Requirements](#requirements)
 - [Demo](#demo)
 - [Screenshots](#screenshots)
@@ -114,17 +112,17 @@ the full tutorial guide can be found [here](https://ngx-storage-firebaseui.fireb
 <a name="sreenshots"/>
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/upload.gif">
 </p>
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/1.png">
 </p>
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/2.png">
 </p>
 
@@ -169,19 +167,19 @@ In the following section, I will show you how to improve the user's experience r
 6. choose the cloud storage path for resized images `thumbs` (see below an example of an image directory in firebase storage)
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/firebase_extensions/1.png">
 </p>
 
 after installation
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/firebase_extensions/2.png">
 </p>
 
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;"
+  <img width="384px" style="text-align: center;"
   src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/firebase_extensions/3.png">
 </p>
 
