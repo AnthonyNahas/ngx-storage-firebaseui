@@ -113,7 +113,20 @@ the full tutorial guide can be found [here](https://ngx-storage-firebaseui.fireb
 
 <a name="sreenshots"/>
 
+<p align="center">
+  <img height="256px" width="256px" style="text-align: center;"
+  src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/upload.gif">
+</p>
 
+<p align="center">
+  <img height="256px" width="256px" style="text-align: center;"
+  src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/1.png">
+</p>
+
+<p align="center">
+  <img height="256px" width="256px" style="text-align: center;"
+  src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-storage-firebaseui@master/assets/v1/2.png">
+</p>
 
 ---
 
@@ -177,7 +190,7 @@ after installation
 1. `firebase init`
 2. init firebase cloud function in your firebase project (`typescript`)
 3. copy and paste the below functions
-4. upload `firbease deploy only functions`
+4. upload `firbease deploy --only functions`
 
 ```typescript
 import * as functions from 'firebase-functions';

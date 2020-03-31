@@ -15,9 +15,12 @@ const fs = require('fs');
 const spawn = require('child-process-promise').spawn;
 // tslint:disable-next-line:no-implicit-dependencies
 const mkdirp = require('mkdirp-promise');
+
+const project = admin.initializeApp(functions.config().firebase);
+console.log('project -> ', project.name);
+
+
 const storage = new Storage();
-
-
 const firestore = admin.firestore();
 const defaultStorage = admin.storage();
 // const defaultBucket = defaultStorage.bucket();
@@ -118,7 +121,6 @@ function getDownloadURL(object: ObjectMetadata): Promise<GetSignedUrlResponse> |
 }
 
 export const adjustOrientation = functions
-  .region('europe-west1')
   .storage
   .object()
   .onFinalize(async (object) => {

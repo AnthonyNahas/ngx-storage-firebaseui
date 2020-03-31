@@ -1,4 +1,3 @@
-export * from './config.interface';
 
 /**
  * @author Anthony Nahas
