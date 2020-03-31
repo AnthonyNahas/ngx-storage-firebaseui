@@ -10,6 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run ngx-storage-firebaseui-demo:serve-ssr",
     "serve:ssr": "node dist/ngx-storage-firebaseui-demo/server/main.js",
+    "serve:prerender": "cd dist/ngx-storage-firebaseui-demo/browser && http-server",
     "build:ssr": "ng build --prod && ng run ngx-storage-firebaseui-demo:server:production",
     "prerender": "ng run ngx-storage-firebaseui-demo:prerender"
   },
@@ -54,6 +55,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "firebase-tools": "^7.16.2",
+    "http-server": "^0.12.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.4.1",
