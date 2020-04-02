@@ -1,5 +1,11 @@
 {
-  "projects": {
-    "default": "ngx-auth-firebaseui"
+  "targets": {
+    "ngx-auth-firebaseui": {
+      "hosting": {
+        "ngx-storage-firebaseui": [
+          "ngx-storage-firebaseui"
+        ]
+      }
+    }
   }
 }

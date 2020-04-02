@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "firebase deploy --only hosting:ngx-storage-firebaseui",
+    "firebase:link:hosting": "firebase target:apply hosting ngx-storage-firebaseui ngx-storage-firebaseui",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
